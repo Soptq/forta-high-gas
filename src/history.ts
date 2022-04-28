@@ -44,9 +44,8 @@ class GasHistory {
         }
         if (value > this.globalMean) {
             return (value - this.globalMean) / sqrt(this.globalVariance);
-        } else {
-            return (this.globalMean - value) / sqrt(this.globalVariance);
         }
+        return BigInt(0);
     }
 
     getDistance(
@@ -72,9 +71,8 @@ class GasHistory {
         }
         if (value > mean) {
             return (value - mean) / sqrt(variance);
-        } else {
-            return (mean - value) / sqrt(variance);
         }
+        return BigInt(0);
     }
 
     globalEnqueue(value: bigint) {

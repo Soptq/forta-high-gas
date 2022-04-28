@@ -28,4 +28,10 @@ Describe each of the type of alerts fired by this agent
 
 ## Test Data
 
-As this bot identifies and tracks value in read time using time series (i.e. the results of the bot depend on many transactions), there is no specific tx that can be tested with. However, you can check the test scripts for mock data.
+As this bot identifies and tracks value in read time using time series (i.e. the results of the bot depend on many transactions), there is no specific tx that can be tested with. 
+
+However, the bot successfully identifies the Ronin Attack with the following commands:
+
+```shell
+npm run range 14442500..14442840 # wait until block 14442835, https://etherscan.io/tx/0xc28fad5e8d5e0ce6a2eaf67b6687be5d58113e16be590824d6cfa1a94467d0b7
+```
